@@ -1,21 +1,19 @@
 /*Create a start button, and have it start the game, and a timer that
-starts counting down, choose a time around 120 seconds*/
+starts counting down, /
 
-/*Create a set of questions centered around a theme.  Have radio buttons
-set-up to select the correct answer for each question, from a multiple
+/*Create a set of questions centered around a theme.  select the correct answer for each question, from a multiple
 choice list.  Only be able to click on one box per question*/
 
-/*When timer is done end the game.  If game is finished before time is up
-supply a "done" button. have a total of correct, Incorrect and unanswered 
+/*When timer is done end the game.  have a total of correct, Incorrect and unanswered 
 questions*/
 
 
 $(document).ready(function() {
-    // console.log( "ready!" );
+    
 
-    // track which question we are on
+    
     var questionCounter = 0;
-    // initial time of 15 seconds for each question
+  
     var time = 15;
     // will keep tally of right guesses for end game
     var correctGuesses = 0;
@@ -164,8 +162,7 @@ $(document).ready(function() {
 		else {
 			resultsScreen();
 		}
-	// console.log(questionCounter);
-	// console.log(questions[questionCounter].correctAnswer);
+	
 	}
 
 	// reset score and counter parameters on restart
@@ -178,13 +175,7 @@ $(document).ready(function() {
     function startGame() {
     	$("#gameScreen").html("<p>You have <span id='timer'>" + time + "</span> seconds left!</p>");
     	$("#start").hide();
-    	// $("#gameScreen").append("<div id='question'>");
-    	// var nextQuestion = questionContent(questionCounter);
-    	// $("#gameScreen").append(nextQuestion);
-
-		// $("#gameScreen").append("<p>" + questions[questionCounter].question + "</p><p>" + questions[questionCounter].choices[0] + "</p><p>" + questions[questionCounter].choices[1] + "</p><p>" + questions[questionCounter].choices[2] + "</p><p>" + questions[questionCounter].choices[3] + "</p>");
-		// questionCounter++;
-    
+    	
         questionContent();
     	timer();
     	userTimeout();
