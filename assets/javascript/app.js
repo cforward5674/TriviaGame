@@ -19,7 +19,11 @@ $(document).ready(function() {
     var correctGuesses = 0;
     //will keep tally of wrong guesses for end game
     var incorrectGuesses = 0;
-
+	var family = [];
+	var car = {};
+	console.log(questions[2].choices[1]);
+	//console.log AC/DC, Scorpions
+	console.log(questions)
     // question & answer array
     var questions = [
       {
@@ -59,7 +63,7 @@ $(document).ready(function() {
 	function questionContent() {
 		// a for loop would be cool here...
     	$("#gameScreen").append("<p><strong>" + 
-    		questions[questionCounter].question + 
+    		questions[0].question + 
     		"</p><p class='choices'>" + 
     		questions[questionCounter].choices[0] + 
     		"</p><p class='choices'>" + 
@@ -198,3 +202,71 @@ $(document).ready(function() {
 		}
 	}));
 });
+
+// {/* <script type="text/javascript">
+// /* Getting Id of Div in which radio button will be add*/
+//     var containerDivClientId = "<%= containerDiv.ClientID %>";
+
+//     /*variable count uses for define unique Ids of radio buttons and group name*/
+//     var count = 100;
+
+//     /*This function call by button OnClientClick event and uses for create radio buttons*/
+//     function dynamicRadioButton()
+//     {
+//         /* create a radio button */
+//         var radioYes = document.createElement("input");
+//         radioYes.setAttribute("type", "radio");
+
+//         /*Set id of new created radio button*/
+//         radioYes.setAttribute("id", "radioYes" + count);
+
+//         /*set unique group name for pair of Yes / No */
+//         radioYes.setAttribute("name", "Boolean" + count);
+
+//         /*creating label for Text to Radio button*/
+//         var lblYes = document.createElement("lable");
+
+//         /*create text node for label Text which display for Radio button*/
+//         var textYes = document.createTextNode("Yes");
+
+//         /*add text to new create lable*/
+//         lblYes.appendChild(textYes);
+
+//         /*add radio button to Div*/
+//         containerDiv.appendChild(radioYes);
+
+//         /*add label text for radio button to Div*/
+//         containerDiv.appendChild(lblYes);
+
+//         /*add space between two radio buttons*/
+//         var space = document.createElement("span");
+//         space.setAttribute("innerHTML", " &nbsp");
+//         containerDiv.appendChild(space);
+
+//         var radioNo = document.createElement("input");
+//         radioNo.setAttribute("type", "radio");
+//         radioNo.setAttribute("id", "radioNo" + count);
+//         radioNo.setAttribute("name", "Boolean" + count);
+
+//         var lblNo = document.createElement("label");
+//         lblNo.innerHTML = "No";
+//         containerDiv.appendChild(radioNo);
+//         containerDiv.appendChild(lblNo);
+
+//         /*add new line for new pair of radio buttons*/
+//         var spaceBr = document.createElement("br");
+//         containerDiv.appendChild(spaceBr);
+
+//         count++;
+//         return false;
+//     }
+// </script>
+// </head>
+// <body>
+// <form id="form1" runat="server">
+// <div>
+// <asp:Button ID="btnCreate" runat="server" Text="Click Me" OnClientClick="return dynamicRadioButton();" />
+// <div id="containerDiv" runat="server"></div>
+// </div>
+// </form>
+// </body> */}
