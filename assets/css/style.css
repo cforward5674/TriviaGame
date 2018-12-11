@@ -5,9 +5,12 @@ body {
 	-o-background-size: cover;
 	background-size: cover;
     font-family: 'Roboto', sans-serif;
-    background-image: url("C:/Users/forwa/OneDrive/Documents/HomeWork/TriviaGame/assets/images/guitar.jpg");
-        
+	background-image:  url("../images/guitar.jpg");
+	/* url("C:/Users/forwa/OneDrive/Documents/HomeWork/TriviaGame/assets/images/guitar.jpg"); */
+	
 }
+        
+
 
 
 h1,
@@ -43,7 +46,7 @@ h3 {
 	-webkit-box-shadow: 7px 5px 47px 0px rgba(255,0,0,0.76);
 	-moz-box-shadow: 7px 5px 47px 0px rgba(255,0,0,0.76);
     box-shadow: 7px 5px 47px 0px rgba(255,0,0,0.76);
-    background-image: url("C:/Users/forwa/OneDrive/Documents/HomeWork/TriviaGame/assets/images/guitar.jpg");
+    background-image: url("../images/guitar.jpg");
 }
 
 .shadow {
