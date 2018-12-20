@@ -19,12 +19,7 @@ $(document).ready(function() {
     var correctGuesses = 0;
     //will keep tally of wrong guesses for end game
     var incorrectGuesses = 0;
-	// var family = [];
-	// var car = {};
-	// console.log(questions[2].choices[1]);
-	// //console.log AC/DC, Scorpions
-	// console.log(questions)
-    // // question & answer array
+	
     var questions = [
       {
 	    question: "Which 80’s rock band had Mick Mars, Nikki Sixx, Vince Neil, & Tommy Lee?",
@@ -63,7 +58,7 @@ $(document).ready(function() {
 	function questionContent() {
 		// a for loop would be cool here...
     	$("#gameScreen").append("<p><strong>" + 
-		questions[questionCounter].choices +
+		questions[questionCounter].question +
     		"</p><p class='choices'>" + 
     		questions[questionCounter].choices[0] + 
     		"</p><p class='choices'>" + 
